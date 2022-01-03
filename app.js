@@ -6,9 +6,11 @@ var bodyParser = require('body-parser');
 var app= express();
 
 //cargar rutas
-var user_routes= require('./routes/user');
-app.use(bodyParser.urlencoded({extended:false}));
+
+
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+var user_routes= require('./routes/user');
 
 //configurar cabeceras
 
