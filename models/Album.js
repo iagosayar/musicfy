@@ -9,7 +9,7 @@ var AlbumSchema= Schema({
 	year:Number,
 	image:String,
 	//guardamos id de otro objeto de la base de datos un artista en este caso
-	artist:{ type : Schema.ObjectId, ref:'Artist'} /
+	artist:{ type : Schema.ObjectId, ref:'Artist'} 
 });
 
-moder.exports= mongoose.model('Album',AlbumSchema);
+module.exports= mongoose.model('Album',AlbumSchema);

@@ -4,8 +4,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ArtistSchema= Schema({
-	name:String,
-	descrption:String
-	image:String
+	image:String,
+	description:String,
+	name:String
+	,
+	
 });
+
 module.exports = mongoose.model('Artist', ArtistSchema);
