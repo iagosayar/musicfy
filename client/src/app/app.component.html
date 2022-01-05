@@ -1,0 +1,64 @@
+<!--*nfIf comprueba si identity es true , si lo es se mostrar dicho div-->
+<div *ngIf="identity" class="navigation col-lg-1">
+  <h1>
+    {{title}}
+  </h1>
+</div>
+<div class="clearfix"></div>
+
+<div *ngIf="identity" class="central col-log-11">
+  <p>Estas loggeado en la app</p>
+</div>
+
+<div class="col-lg-12" *ngIf="!identity">
+
+
+  <div class="col-lg-6"> <!--LOGIN-->
+    <h1>Identificate</h1>
+    
+    <form class ="col-md-9">
+      <p>
+        <label>Correo Electronico:</label>
+        <input type="email" name="" class="form-control" required/>
+      </p>
+      
+
+      <p>
+        <label>Contraseña</label>
+        <input type="password" name="" class="form-control" required/>
+      </p>
+
+      <input type="submit" value="ENTRAR" class ="btn btn-primary"/>
+
+    </form>
+  </div>
+  
+  <div class="col-lg-6"> <!--REGISTER-->
+
+    <h1>Registrate</h1>      
+    <form class="col-md-9"  >
+      <p>
+        <label>Nombre</label>
+        <input type="text" name="Nombre" class="form-control" required />
+      </p>
+
+      <p>
+        <label>Apellido</label>
+        <input type="text" name="Apellido" class="form-control" required />
+      </p>
+
+      <p>
+        <label>Email</label>
+        <input type="email" name="Email" class="form-control" required />
+      </p>
+
+      <p>
+        <label>Contraseña</label>
+        <input type="password" name="Contraseña" class="form-control" required />
+      </p>
+
+      <input type="submit" value="Registrarse" class="btn btn-primary"/>
+
+    </form>
+  </div>
+</div>
